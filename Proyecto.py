@@ -64,7 +64,8 @@ with st.expander("🔎 Reporte de Clasificación y Matriz de Confusión"):
 
     cm = confusion_matrix(y_test, y_pred, labels=rf.classes_)
     cm_df = pd.DataFrame(cm, index=rf.classes_, columns=rf.classes_)
-    st.dataframe(cm_df.style.background_gradient(axis=None))
+    st.dataframe(cm_df)
+
 
 # Visualizaciones
 st.subheader("📈 Visualizaciones del Dataset")
